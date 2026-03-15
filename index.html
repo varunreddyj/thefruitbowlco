@@ -6,73 +6,80 @@
 
 <style>
 
+/* Reset and body */
 body{
-font-family: Arial, sans-serif;
-background: linear-gradient(135deg,#ff9966,#ff5e62);
-color:white;
-text-align:center;
-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-flex-direction:column;
-margin:0;
-padding:20px;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg,#ff9966,#ff5e62);
+    color:white;
+    margin:0;
+    padding:20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
 }
 
+/* Container */
 .container{
-max-width:600px;
+    max-width:650px;
+    text-align:center;
+    background: rgba(255,255,255,0.05);
+    padding:40px 30px;
+    border-radius:20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
 }
 
+/* Title */
 h1{
-font-size:48px;
-margin-bottom:10px;
+    font-size:50px;
+    margin-bottom:15px;
 }
 
+/* Fruit icons row */
+.fruits{
+    font-size:32px;
+    margin-bottom:20px;
+}
+
+/* Paragraphs */
 p{
-font-size:18px;
-opacity:0.95;
-margin:8px 0;
+    font-size:18px;
+    margin:10px 0;
+    line-height:1.5;
 }
 
-.loader{
-margin-top:25px;
-border:6px solid rgba(255,255,255,0.3);
-border-top:6px solid white;
-border-radius:50%;
-width:50px;
-height:50px;
-animation:spin 1s linear infinite;
-margin-left:auto;
-margin-right:auto;
+/* Contact box */
+.contact{
+    margin-top:25px;
+    font-size:16px;
+    background: rgba(255,255,255,0.2);
+    padding:15px 20px;
+    border-radius:15px;
 }
 
-@keyframes spin{
-0%{transform:rotate(0deg);}
-100%{transform:rotate(360deg);}
+.contact a{
+    color:white;
+    font-weight:bold;
+    text-decoration:underline;
 }
 
-.contact-btn{
-display:inline-block;
-margin-top:30px;
-padding:12px 25px;
-background:white;
-color:#ff5e62;
-text-decoration:none;
-font-weight:bold;
-border-radius:30px;
-transition:0.3s;
-}
-
-.contact-btn:hover{
-background:#ffe6e6;
-transform:scale(1.05);
-}
-
+/* Footer */
 .footer{
-margin-top:35px;
-font-size:14px;
-opacity:0.85;
+    margin-top:25px;
+    font-size:14px;
+    opacity:0.85;
+}
+
+/* Subtle floating fruit animation */
+@keyframes float{
+    0% { transform: translateY(0px);}
+    50% { transform: translateY(-10px);}
+    100% { transform: translateY(0px);}
+}
+.fruits span{
+    display:inline-block;
+    animation: float 3s ease-in-out infinite;
+    margin: 0 5px;
 }
 
 </style>
@@ -82,21 +89,26 @@ opacity:0.85;
 
 <div class="container">
 
-<h1>🍓 The Fruit Bowl Co</h1>
+<h1>🍓 The Fruit Bowl Co 🍊</h1>
 
-<p>Fresh things are coming soon.</p>
+<div class="fruits">
+<span>🍌</span>
+<span>🍉</span>
+<span>🍍</span>
+<span>🥭</span>
+<span>🍎</span>
+</div>
 
-<p>Our website is currently under construction.</p>
+<p>Fresh delights are coming soon! 🍓</p>
+<p>We’re carefully crafting the best fruits and goodies just for you.</p>
 
-<div class="loader"></div>
-
-<a class="contact-btn"
-href="mailto:admin@thefruitbowlco.ca?subject=Fruit Bowl Inquiry&body=Hello The Fruit Bowl Co,">
-Contact Us
-</a>
+<div class="contact">
+Want more info or to get in touch? <br>
+<a href="mailto:admin@thefruitbowlco.ca">admin@thefruitbowlco.ca</a>
+</div>
 
 <div class="footer">
-Launching Soon 🚀
+Stay tuned! Launching Soon 🚀
 </div>
 
 </div>
